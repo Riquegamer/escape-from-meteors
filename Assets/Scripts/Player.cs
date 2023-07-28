@@ -15,15 +15,17 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        _rig.velocity = new Vector3(Input.acceleration.x * _speed, 0,0); // Movendo o player no eixo x baseado no acelerometro
+            _rig.velocity = new Vector3(Input.acceleration.x * _speed, 0, 0); // Movendo o player no eixo x baseado no acelerometro
 
-        if (Input.acceleration.x > 0)
-        {
-            anim.SetBool("moving", true);
-        }
-        else 
-        {
-            anim.SetBool("moving", false);
-        }
+            if (Input.acceleration.x > 0)
+            {
+                anim.SetBool("moving", true);
+            }
+            else
+            {
+                anim.SetBool("moving", false);
+            }
+        
+
     }
 }

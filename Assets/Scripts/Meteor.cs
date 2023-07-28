@@ -34,6 +34,7 @@ public class Meteor : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            GameController.instance.GameOver();
         }
     }
 
@@ -43,4 +44,5 @@ public class Meteor : MonoBehaviour
 
         _sprite.sprite = newSkin.sprite;
     }
+
 }
