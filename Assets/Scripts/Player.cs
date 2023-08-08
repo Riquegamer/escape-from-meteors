@@ -17,13 +17,15 @@ public class Player : MonoBehaviour
     {
             _rig.velocity = new Vector3(Input.acceleration.x * _speed, 0, 0); // Movendo o player no eixo x baseado no acelerometro
 
-            if (Input.acceleration.x > 0)
+            if (Input.acceleration.x < 0)
             {
-                anim.SetBool("moving", true);
+                anim.SetBool("Left", true);
+                anim.SetBool("Right", false);
             }
-            else
+            else if (Input.acceleration.x > 0)
             {
-                anim.SetBool("moving", false);
+                anim.SetBool("Left", false);
+                anim.SetBool("Right", true);
             }
         
 

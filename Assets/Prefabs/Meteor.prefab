@@ -104,7 +104,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ecf759dbdee35a4f9bdd942119f29e2, type: 2}
   - {fileID: 11400000, guid: 7fd2aafe145b4ad4aba575418e050cbc, type: 2}
   _sprite: {fileID: 4832031841941467615}
-  _speed: 5
+  _speed: 10
 --- !u!70 &546848444
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
