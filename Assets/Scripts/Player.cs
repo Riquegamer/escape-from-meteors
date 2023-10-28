@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,7 +12,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rig; // Variavel responsavel por controlar as propriedades do componente Rigidbody2D
 
     [SerializeField]
-    private Animator anim; // Variavel responsavel por controlar as propriedades do componente animator
+    private GameObject _rocket;
+
+    // Variavel responsavel por controlar as propriedades do componente animator
 
     void Update()
     {
@@ -19,15 +22,17 @@ public class Player : MonoBehaviour
 
             if (Input.acceleration.x < 0)
             {
-                anim.SetBool("Left", true);
-                anim.SetBool("Right", false);
+                _rocket.transform.Rotate(0, 1, 0);
             }
             else if (Input.acceleration.x > 0)
             {
-                anim.SetBool("Left", false);
-                anim.SetBool("Right", true);
+                _rocket.transform.Rotate(0, -1, 0);
+
             }
         
 
     }
+
+   
+
 }
